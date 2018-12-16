@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tugas_1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="tugas1.css" />
+</head>
+
+<body>
+    <div id="tubuh">
+
+        <!-- sisi bagian kiri -->
+        <div id="sisi_kiri">
+            <img src="background1.jpg">
+        </div>
+
+        <!-- sisi bagian kanan -->
+        <div id="sisi_kanan">
+
+            <!-- Isi bagian kanan -->
+            <div id="isi_sisi_kanan">
+
+                <h1>Latihan Ajax</h1>
+                <p>User Detail ID: <span></span></p>
+
+                <form action="#">
+                    <input id="idAjax" type="text">
+                    <div class=input1>
+                        <img src="" alt="User Picture dari Ajax" id="pictAjax">
+                    </div>
+            
+                    <label>First name : </label>
+                    <label id="firstnameAjax"></label><br> 
+                    <label>Last Name : </label>
+                    <label id="lastnameAjax"></label> 
+                </form>
+             </div> <!--penutup isi_sisi_kanan-->
+            </div>
+            <!--penutup sisi_kanan-->
+        </div>
+        <!--penutup tubuh-->
+
+        <script src="jquery.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        $("#idAjax").on("keyup", function(){
+            $.ajax({
+                url: "https://reqres.in/api/users/"+$("#idAjax").val(),
+                dataType: "json",
+            }).always(function (res) {
+                $("#pictAjax").attr("src", res.data.avatar);
+                $("#firstnameAjax").text(res.data.first_name);
+                $("#lastnameAjax").text(res.data.last_name);
+            })
+})
+
+        </script>
+
+</body>
+
+</html>

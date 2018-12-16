@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Just Sunday';
+    src: url('JustSunday-Bold.woff2') format('woff2'),
+        url('JustSunday-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cheetah Kick - Personal Use';
+    src: url('CheetahKick-PersonalUse.woff2') format('woff2'),
+        url('CheetahKick-PersonalUse.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
