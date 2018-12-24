@@ -1,9 +1,86 @@
-.carousel-item {
-	height: 65vh;
-	min-height: 350px;
-	background: no-repeat center center scroll;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-  }
+.grid-container {
+  display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  border: 1px dashed;
+  text-align: center;
+	font-size: 30px;
+}
+
+img{z-index: -1;}
+
+ul {
+  list-style-type: none;
+  margin: auto;
+  padding: auto 0px;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+li {
+	float: left;
+	margin: auto;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+.panel, .flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+.panel {
+  padding: 50px;
+  display: none;
+}
+
+.item1 {
+	grid-column: 1 / span 2;
+	grid-row: 1;
+}
+	
+.item2 {
+	grid-column: 1 / span 2;
+	grid-row: 2;
+}
+	
+.item3 {
+	grid-column: 1 / span 2;
+	grid-row: 3;
+}
+	
+.galaxy{
+	width: 1346px;
+	margin:0 auto;
+}
+
+.slick-initialized .slick-slide {
+	height: 500px;
+	object-fit: cover;
+	object-position: center; 
+}
+	
